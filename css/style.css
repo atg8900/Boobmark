@@ -1,0 +1,141 @@
+:root {
+  --subFont: "Righteous", sans-serif;
+  --mainFont: "Pacifico", cursive;
+  --titleFont: "PT Sans Caption", sans-serif;
+}
+.my-color {
+  background-color: #4cbdb8;
+}
+::selection {
+  background-color: #4cbdb8;
+  color: #fff;
+}
+
+header {
+  min-height: 100vh;
+  background-color: #eee;
+  padding: 60px;
+  overflow: auto;
+}
+header h1 {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: var(--mainFont);
+  color: #352e28;
+  font-size: 50px;
+  position: relative;
+  z-index: 3;
+  width: fit-content;
+  margin-inline: auto;
+  overflow: hidden;
+}
+header h1::before {
+  position: absolute;
+  content: "";
+  width: 93%;
+  height: 30%;
+  background-color: #4cbdb8;
+  z-index: -1;
+  transition: all 0.35s;
+  bottom: 10px;
+}
+header h1:hover:before {
+  height: 70%;
+}
+header .myForm {
+  border-radius: 40px;
+}
+header .container .myForm h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--subFont);
+  font-size: 2rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #4cbdb8 30%, #ffb6ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header .container .myForm .btne {
+ background-color: #4cbdb8;
+  color: #fff;
+  width: 160px;
+  height: 40px;
+  position: relative;
+  border: transparent;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-family: var(--titleFont);
+}
+header .container .myForm .btne::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  --bs-btn-border-width: var(--bs-border-width);
+  background:  #4cbdb8;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  transform-origin: bottom;
+  transform: translateY(-100%) rotateX(90deg);
+}
+header .container .myForm .btne:hover:before{
+  transform: translateY(0) rotateX(0deg);
+
+}
+header .container .myForm .btne::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #4cbdb8;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.5s;
+  --bs-btn-border-width: var(--bs-border-width);
+  transform-origin: top;
+  transform: translateY(0%) rotateX(0deg);
+}
+header .container .myForm .btne:hover:after{
+  transform: translateY(100%) rotateX(90deg);
+
+}
+.table .table-active {
+  font-family: var(--titleFont);
+  --bs-table-color-state: #fff !important;
+  --bs-table-bg-state: #4cbdb8 !important;
+}
+.table {
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.2);
+}
+
+.table th {
+  border-bottom: 2px solid #4cbdb8;
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0;
+  }
+  header h1 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  header .container {
+    width: 100%;
+  }
+  header .container .myForm h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

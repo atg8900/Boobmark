@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+  
+    
+      <header>
+      
+        <div class="container">
+          <h1>Boobmarker</h1>
+          <div
+            class="shadow overflow-hidden bg-white d-flex flex-column justify-content-center gap-3 p-3 mt-3 myForm"
+          >
+            <h2>
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="mb-3">
+              <label for="siteName" class="form-label">
+                <i class="fa-solid fa-book"></i>
+                 Site Name
+                </label>
+              <input
+                type="text"
+                class="form-control w-100 inp"
+                id="siteName"
+                placeholder="Bookmark Name"
+              />
+             
+            </div>
+            <div class="mb-3">
+              <label for="siteUrl" class="form-label">
+                <i class="fa-solid fa-link"></i>
+                Site URL</label>
+              <input
+                type="text"
+                class="form-control inp"
+                id="siteUrl"
+                placeholder="Website URL"
+              />
+             
+            </div>
+            <div class="d-flex justify-content-center ">
+              <button id="submitBtn" data-text="Submit" type="submit" class="btne fw-semibold ">
+                
+              </button>
+            </div>
+          </div>
+          <div id="tableSec" class="mt-5 d-none">
+            <input
+              id="searchInput"
+              class="form-control w-100 mb-3"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <div class="table-responsive">
+              <table class="table text-center">
+                <thead class="table- table-active">
+                  <tr>
+                    <th scope="col" class="py-2">Index</th>
+                    <th scope="col" class="py-2">Website</th>
+                    <th scope="col" class="py-2">Visit</th>
+                    <th scope="col" class="py-2">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+   
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
